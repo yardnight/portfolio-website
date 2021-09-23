@@ -1498,10 +1498,13 @@ body.ie ._ibg img {
   background-color: transparent;
 }
 
+.no-webp .contact{
+  background-image: url(../img/contact/contact.png); }
+
 .contact {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../img/contact/contact.svg);
+  background-position: 50% 50%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -2213,6 +2216,12 @@ body.scale-cv {
   font-size: var(--smaller-font-size);
 }
 
+.references__contact span,
+.references__subtitle span {
+  text-decoration: none;
+  color: inherit;
+}
+
 /*=======================<Languages>======================*/
 
 .languages__content {
@@ -2565,9 +2574,8 @@ input:checked + label:after {
     max-width: 440px;
   }
 
-  .contact {
-    background-image: url(../img/contact.svg);
-  }
+  .no-webp .contact{
+    background-image: url(../img/contact/contact.png); }
 }
 
 @media (max-width: 868px) {
@@ -2893,8 +2901,10 @@ input:checked + label:after {
     font-size: 18px;
   }
 
+  .no-webp .contact{
+    background-image: url(../img/contact/contact.png); }
+
   .contact {
-    background-image: url(../img/contact.svg);
     margin-top: 10px;
   }
 
@@ -3005,4 +3015,16 @@ input:checked + label:after {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem 0.5rem;
   }
+}
+
+.webp .contact{ background-image: url(../img/contact/contact.webp); }
+
+@media (max-width: 991.98px){
+
+  .webp .contact{ background-image: url(../img/contact/contact.webp); }
+}
+
+@media (max-width: 767.98px){
+
+  .webp .contact{ background-image: url(../img/contact/contact.webp); }
 }

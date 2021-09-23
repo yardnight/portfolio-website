@@ -9,7 +9,7 @@ function slidesPlugin(activeSlide = 3) {
             clearActiveClasses()
 
             slide.classList.add('active')
-        })  
+        })
     }
     // cleaning activity
     function clearActiveClasses() {
