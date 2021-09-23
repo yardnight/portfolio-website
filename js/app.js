@@ -1,33 +1,29 @@
+//===================<CARD SLIDER>========================================================
+function slidesPlugin(activeSlide = 3) {
+    const slides = document.querySelectorAll('.hard-skills__slide, .soft-skills__slide')
+
+    slides[activeSlide].classList.add('active')
+
+    for (const slide of slides) {
+        slide.addEventListener('click', () => {
+            clearActiveClasses()
+
+            slide.classList.add('active')
+        })  
+    }
+    // cleaning activity
+    function clearActiveClasses() {
+        slides.forEach((slide) => {
+            slide.classList.remove('active')
+        })
+    }
+
+}
+
+slidesPlugin(3)
 
 
-// Theme switcher
-
-// window.onload = () =>{
-    // localStorage.setItem('data-theme', 'light');  
-    // if (localStorage.getItem('data-theme') === 'lite') { 
-        // document.getElementById('darkmode').setAttribute('data-theme', localStorage.getItem('data-theme'))
-    // console.log(localStorage.getItem('data-theme'));
-    // } else if ( localStorage.getItem('data-theme') === 'dark') {
-        // document.getElementById('darkmode').setAttribute('data-theme', localStorage.getItem('data-theme'))  
-    // }
-// }
-
-// const input = document.getElementById('darkmode');
-
-// input.addEventListener('change', (event) =>{
-//     if (event.target.checked){
-//        document.body.setAttribute('data-theme', 'dark')
-//        localStorage.setItem('data-theme', 'dark');
-//        const sw = document.getElementById('switcher');
-//        sw.checked == true;
-//        console.log('sw',sw)
-
-//     } else {
-//        document.body.setAttribute('data-theme', 'light')
-//        localStorage.setItem('data-theme', 'light');
-//     }
-//     console.log(localStorage.getItem('data-theme'));
-// })
+//===================<FORMS>==============================================================
 
 // "use strict"
 
