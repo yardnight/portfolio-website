@@ -977,7 +977,9 @@ body.ie ._ibg img {
 .soft-skills__slide.active h4 {
   display: flex;
   justify-content: center;
+  margin-top: 0.5rem;
   font-weight: bold;
+  font-size: 1.2rem;
   color: inherit;
 }
 
@@ -3000,7 +3002,7 @@ input:checked + label:after {
 
   .soft-skills__slide.active .icon-box {
     width: 80%;
-    top: 0%;
+    top: 5%;
     left: 10%;
   }
 
