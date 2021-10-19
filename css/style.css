@@ -2218,10 +2218,11 @@ body.scale-cv {
   font-size: var(--smaller-font-size);
 }
 
-.references__contact span,
-.references__subtitle span {
+.references__contact a,
+.references__subtitle a {
   text-decoration: none;
-  color: inherit;
+  color: var(--text-color-light);
+  cursor: pointer;
 }
 
 /*=======================<Languages>======================*/
