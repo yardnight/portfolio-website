@@ -1,18 +1,26 @@
-//===================<CARD SLIDER>========================================================
-function slidesPlugin(activeSlide = 3) {
-    const slides = document.querySelectorAll('.hard-skills__slide, .soft-skills__slide')
+//===================<Skills SLIDER>========================================================
+function slidesPlugin(activeSlide = 2) {
+    const hardSkills = document.querySelectorAll('.hard-skills__slide');
+    const extraSkills = document.querySelectorAll('.extra-skills__slide');
+   
+    hardSkills[activeSlide].classList.add('active');
+    var activeExSlide = extraSkills.length-activeSlide;
+    extraSkills[activeExSlide].classList.add('active');
+    eventLook(hardSkills);
+    eventLook(extraSkills);
 
-    slides[activeSlide].classList.add('active')
-
-    for (const slide of slides) {
-        slide.addEventListener('click', () => {
-            clearActiveClasses()
-
-            slide.classList.add('active')
-        })
+    // tracking clicking on a skillslide
+    function eventLook(slides){
+        for (const slide of slides) {
+            slide.addEventListener('click', () => { 
+                               
+                clearActiveClasses(slides);
+                slide.classList.add('active')
+            })
+        }
     }
     // cleaning activity
-    function clearActiveClasses() {
+    function clearActiveClasses(slides) {
         slides.forEach((slide) => {
             slide.classList.remove('active')
         })
@@ -20,8 +28,7 @@ function slidesPlugin(activeSlide = 3) {
 
 }
 
-slidesPlugin(3)
-
+slidesPlugin(2)
 
 //===================<FORMS>==============================================================
 
