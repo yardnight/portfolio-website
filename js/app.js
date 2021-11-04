@@ -28,7 +28,68 @@ function slidesPlugin(activeSlide = 2) {
 
 }
 
-slidesPlugin(2)
+slidesPlugin(2);
+
+class Skill{
+    constructor(name,progress,iconName){
+        this.name=name;
+        this.progress=progress;
+        this.iconName=iconName;
+        this.iconSrc="img/icons/icons.svg#iconskills--"+this.iconName;
+        this.iconClass="svg-iconskills--"+ this.iconName + "-dims";
+        this.iconAlt="iconSkills--"+ this.iconName
+    }
+    }
+
+var htmlSkill = new Skill("HTML5",80,"html5");
+var cssSkill = new Skill("CSS3",60,"css3");
+var jsSkill = new Skill("JS",45,"js3");
+var sassSkill = new Skill("SASS",60,"sass");
+var gulpSkill = new Skill("GULP",50,"gulp");
+var gitSkill = new Skill("GIT",70,"git");
+
+var skills=[htmlSkill,cssSkill,jsSkill,sassSkill,gulpSkill,gitSkill];
+
+skillsProgress(skills);
+
+function skillsProgress(skills){
+
+    var skillsName=document.querySelectorAll('.hard-skills__slide h3');
+    for (var i=0; i<skillsName.length; i++){
+        skillsName[i].innerHTML=skills[i].name;
+    }
+
+    var skillsValues=document.querySelectorAll('#progress');
+    var skillsAmount = skillsValues.length
+    if(skills.length===skillsAmount){
+        
+        for (var i=0; i<skillsAmount; i++) {
+            skillsValues[i].innerHTML = skills[i].progress+'%';
+        }
+    } else{
+        console.log("HTML skills amount doesnt mutch js skill's amount")
+    }
+    var skillIconSources = document.querySelectorAll('.hard-skills__slide .icon-box source');
+    
+    for (var i=0; i<skillIconSources.length; i++) {
+        skillIconSources[i].srcset = skills[i].iconSrc;
+    }
+    var skillsIcons = document.querySelectorAll('.hard-skills__slide .icon-box img');
+    for (var i=0; i<skillsIcons.length; i++) {
+        skillsIcons[i].src = skills[i].iconSrc;
+        skillsIcons[i].className = skills[i].iconClass;
+        skillsIcons[i].alt = skills[i].iconAlt;
+    }
+}
+
+function addHardSkillSlider(skills){
+    var skillsContainer=document.querySelector('.hard-skills__content')
+    var skillsCounter=document.querySelectorAll('hard-skills__slide').length;
+    if (skills.length>skillsCounter){
+        var newSlide = skillsContainer.appendChild('div');
+        newSlide.className = 'hard-skills__slide';
+    }
+}
 
 //===================<FORMS>==============================================================
 
