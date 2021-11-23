@@ -112,9 +112,10 @@ let resumeButton = document.getElementById('resume-button')
 let opt = {
     margin:       0,
     filename:     'myResume.pdf',
-    image:        { type: 'jpeg', quality: 0.98 },
-    html2canvas:  { scale: 2 },
-    jsPDF:        { format: 'a4', orientation: 'portrait' }
+    image:        { type: 'png' },
+    html2canvas:  { scale: 2.0 },
+    jsPDF:        { format: 'a4', orientation: 'portrait' },
+    enableLinks:  true 
 }
 
 //FUNCTION TO CALL AREACV AND HTML2PDF OPTIONS
@@ -129,5 +130,5 @@ resumeButton.addEventListener('click', () => {
 
         generateResume()
 
-        setTimeout(removeScale, 5000)
+        setTimeout(removeScale, 1000)
 }) 
