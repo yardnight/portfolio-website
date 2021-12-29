@@ -1172,11 +1172,29 @@ body.ie ._ibg img {
 .recent-posts__header {
   display: flex;
   margin: 0 0 20px 0;
+  align-items: center;
 }
 
 .recent-posts__title {
-  padding: 0 20px 0 0;
   flex: 1 1 auto;
+  display: inline-block;
+}
+
+.recent-posts__title a {
+  text-decoration: none;
+  color: var(--color-ref);
+  font-weight: normal;
+  font-size: 22px;
+  letter-spacing: 1px;
+  line-height: 272.7272727273%;
+  cursor: pointer;
+}
+
+.recent-posts__title a span {
+  transition: all 0.5s ease;
+  display: inline-block;
+  font-size: 35px;
+  font-weight: 800;
 }
 
 .recent-posts__view-all {
@@ -3390,6 +3408,11 @@ input:checked + label:after {
   .extra-skills__slide.active {
     flex: 2;
     height: 20vh;
+  }
+
+  .recent-posts__title a:hover span {
+    transform: scaleY(150%) translateY(-4px);
+    color: var(--color-refh);
   }
 
   .recent-posts__items {
