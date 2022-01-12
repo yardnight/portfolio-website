@@ -35,7 +35,7 @@ var blogData = [
     ),
     new Blog(
         "Dark theme included",
-        ">30 Aug 2021",
+        "30 Aug 2021",
         "Blog, JavaScript",
         "A few days I tried to make my blog site with dark theme inside. Even I did it in several days myself but a dark theme switcher every time after reloading page appears default again. Found a good solution implemented for Tilda. Small correction in my code and now it works at last.",
         "06"
