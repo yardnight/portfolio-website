@@ -13,7 +13,7 @@ class Blog{
 };
 var blogData = [
     new Blog(
-        "Update the blog",
+        "An Update for the blog",
         "10 Jan 2022",
         "Blog, CSS",
         "Using my DOM and JS knowleges adopted the blog as a object with posts. My fearther wishes to make SQL database for store the blog post in there and using a modal window to create new posts straight from the page",
