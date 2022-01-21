@@ -1,4 +1,28 @@
+import {blogData} from './data-blog.min.js';
+import {skillsData} from './data-skills.min.js';
+
 //===================<Skills SLIDER>========================================================
+
+var hard = skillsData.hardSkills;
+var extra = skillsData.extraSkills; 
+ 
+buildSkills(hard);
+buildSkills(extra);
+
+function buildSkills(skillItems){
+    const blockOfSkills = document.getElementById(`${skillItems.skillId}`);
+    for (let i=0; i<skillItems.skillData.length; i++){
+        let skillItem = document.createElement("div");
+        skillItem.classList.add(`${skillItems.skillClass}`);
+
+        skillItem.innerHTML = skillItems.skillContent(i);
+        blockOfSkills.appendChild(skillItem);
+    }
+};
+
+//===================<SKILLS SLIDER>=========================================
+slidesPlugin(2);
+
 function slidesPlugin(activeSlide = 2) {
     const hardSkills = document.querySelectorAll('.hard-skills__slide');
     const extraSkills = document.querySelectorAll('.extra-skills__slide');
@@ -25,120 +49,81 @@ function slidesPlugin(activeSlide = 2) {
             slide.classList.remove('active')
         })
     }
+};
+//===================<SKILLS SLIDER END>=========================================
 
-}
+//======================<STATIC>=========================
 
-slidesPlugin(2);
+// var htmlSkill = new Skill("HTML5",80,"html5");
+// var cssSkill = new Skill("CSS3",60,"css3");
+// var jsSkill = new Skill("JS",45,"js3");
+// var sassSkill = new Skill("SASS",60,"sass");
+// var gulpSkill = new Skill("GULP",50,"gulp");
+// var gitSkill = new Skill("GIT",70,"git");
 
-class Skill{
-    constructor(name,progress,iconName){
-        this.name=name;
-        this.progress=progress;
-        this.iconName=iconName;
-        this.iconSrc="img/icons/icons.svg#iconskills--"+this.iconName;
-        this.iconClass="svg-iconskills--"+ this.iconName + "-dims";
-        this.iconAlt="iconSkills--"+ this.iconName
-    }
-    }
+// var skills=[htmlSkill,cssSkill,jsSkill,sassSkill,gulpSkill,gitSkill];
 
-var htmlSkill = new Skill("HTML5",80,"html5");
-var cssSkill = new Skill("CSS3",60,"css3");
-var jsSkill = new Skill("JS",45,"js3");
-var sassSkill = new Skill("SASS",60,"sass");
-var gulpSkill = new Skill("GULP",50,"gulp");
-var gitSkill = new Skill("GIT",70,"git");
+// skillsProgress(skills);
 
-var skills=[htmlSkill,cssSkill,jsSkill,sassSkill,gulpSkill,gitSkill];
+// function skillsProgress(skills){
 
-skillsProgress(skills);
-
-function skillsProgress(skills){
-
-    var skillsName=document.querySelectorAll('.hard-skills__slide h3');
-    for (var i=0; i<skillsName.length; i++){
-        skillsName[i].innerHTML=skills[i].name;
-    }
-
-    var skillsValues=document.querySelectorAll('#progress');
-    var skillsAmount = skillsValues.length
-    if(skills.length===skillsAmount){
-        
-        for (var i=0; i<skillsAmount; i++) {
-            skillsValues[i].innerHTML = skills[i].progress+'%';
-        }
-    } else{
-        console.log("HTML skills amount doesnt mutch js skill's amount")
-    }
-    var skillIconSources = document.querySelectorAll('.hard-skills__slide .icon-box source');
-    
-    for (var i=0; i<skillIconSources.length; i++) {
-        skillIconSources[i].srcset = skills[i].iconSrc;
-    }
-    var skillsIcons = document.querySelectorAll('.hard-skills__slide .icon-box img');
-    for (var i=0; i<skillsIcons.length; i++) {
-        skillsIcons[i].src = skills[i].iconSrc;
-        skillsIcons[i].className = skills[i].iconClass;
-        skillsIcons[i].alt = skills[i].iconAlt;
-    }
-}
-
-function addHardSkillSlider(skills){
-    var skillsContainer=document.querySelector('.hard-skills__content')
-    var skillsCounter=document.querySelectorAll('hard-skills__slide').length;
-    if (skills.length>skillsCounter){
-        var newSlide = skillsContainer.appendChild('div');
-        newSlide.className = 'hard-skills__slide';
-    }
-}
-//===================<Skills SLIDER>========================================================
-
-//===================<FORMS>================================================================
-
-// "use strict"
-
-// document.addEventListener('DOMContentLoaded', function(){
-//     const form = document.getElementById('form');
-//     console.log(form)
-//     form.addEventListener('submit', formSend);
-
-//     async function formSend(event) {
-//         event.preventDefault();
-//         let error = formValidate(form)
+//     var skillsName=document.querySelectorAll('.hard-skills__slide h3');
+//     for (var i=0; i<skillsName.length; i++) {
+//         skillsName[i].innerHTML=skills[i].name;
 //     }
 
-//     function formValidate(form) {
-//         let error = 0;
-//         let formReq = document.querySelectorAll('._req');
-
-//         for(let index = 0; index < formReq.length; index++) {
-//             const input = formReq[index];
-//             formRemoveError(input) ;
-
-//             if(input.classList.contains('_email')){
-//                 if(emailTest(input)){
-//                     formAddError(input);
-//                     error++;
-//                 }
-//             } else if (input.getAttribute("type") === "checkbox" && input.checked === false){
-//                 formAddError(input);
-//                 error++;
-//             } else {
-//                 if (input.value === '') {
-//                     formAddError(input);
-//                     error++;
-//                 }
-//             }
+//     var skillsValues=document.querySelectorAll('#progress');
+//     var skillsAmount = skillsValues.length
+//     if (skills.length===skillsAmount) {
+//         for (var i=0; i<skillsAmount; i++) {
+//             skillsValues[i].innerHTML = skills[i].progress+'%';
 //         }
+//     } else {
+//         console.log("HTML skills amount doesnt mutch js skill's amount")
 //     }
-//     function formAddError(input) {
-//         input.parentElement.classList.add('_error');
-//         input.classList.add('_error');
+//     var skillIconSources = document.querySelectorAll('.hard-skills__slide .icon-box source');
+    
+//     for (var i=0; i<skillIconSources.length; i++) {
+//         skillIconSources[i].srcset = skills[i].iconSrc;
 //     }
-//     function formRemoveError(input) {
-//         input.parentElement.classList.remove('_error');
-//         input.classList.remove('_error');
+//     var skillsIcons = document.querySelectorAll('.hard-skills__slide .icon-box img');
+//     for (var i=0; i<skillsIcons.length; i++) {
+//         skillsIcons[i].src = skills[i].iconSrc;
+//         skillsIcons[i].className = skills[i].iconClass;
+//         skillsIcons[i].alt = skills[i].iconAlt;
 //     }
-//     function emailTest(input) {
-//         return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
-//     }
-// })
+// };
+
+//======================<STATIC>=========================
+
+
+//===================<Resent post>==========================================================
+
+recentPosts(blogData);
+
+function recentPosts(data){
+
+    const postsSection = document.getElementById("recent-blog");
+
+    for (let i=0; i<2; i++){
+        let recentPost = document.createElement("div");
+        recentPost.classList.add("recent-posts__column");
+        recentPost.innerHTML= 
+        `<article class="recent-posts__item recent-post">
+            <a href="blog.html" class="recent-post__title ">
+            ${data[i].name}
+            </a>
+            <div class="recent-post__info">
+            ${data[i].time} <span>|</span> ${data[i].subject}
+            </div>
+            <div class="recent-post__text text">
+            ${data[i].message}
+            </div>
+        </article>`;
+
+        postsSection.appendChild(recentPost);
+    }
+};
+
+//===================<Resent post>==========================================================
+
