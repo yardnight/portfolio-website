@@ -2,8 +2,8 @@
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exeption;
 
-    require 'src/phpmailer/src/Exeption.php';
-    require 'src/phpmailer/src/PHPMailer.php';
+    require 'phpmailer/src/Exeption.php';
+    require 'phpmailer/src/PHPMailer.php';
 
     $mail = new PHPMailer(true);
     $mail->CharSet = 'UTF-8';
@@ -19,7 +19,7 @@
     $body = '<h1> Meet a new offer</h1>';
 
     if(trim(!empty($_POST['firstName']))){
-        $body = '<p> <strong>Name: '.$_POST['firstName'].'</p>';
+        $body = '<p> <strong>Name: '.$_POST['firstName'].'qq</p>';
     }
     if(trim(!empty($_POST['lastName']))){
         $body = '<p> <strong>Last name: '.$_POST['lastName'].'</p>';

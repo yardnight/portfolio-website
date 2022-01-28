@@ -2596,7 +2596,7 @@ body.scale-cv {
   transition: 0.5s ease background-color;
 }
 
-.menu__switcher label:after {
+.menu__switcher label::after {
   position: absolute;
   content: "";
   width: 20px;
@@ -2610,12 +2610,12 @@ body.scale-cv {
   transition: 0.5s ease;
 }
 
-input:checked + .menu__switcher label {
+.menu__switcher input:checked + label {
   background-color: var(--color-backprime);
   border: 2px solid var(--color-switcher);
 }
 
-input:checked + .menu__switcher label:after {
+.menu__switcher input:checked + label::after {
   background-color: var(--color-switcher);
   left: calc(100% - 25px);
   box-shadow: inset 1px 1px 1px var(--color-switblk), inset -1px -1px 1px var(--color-switsdw);
