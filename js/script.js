@@ -17,7 +17,7 @@ testWebP(function (support) {
 
 // Check if mobile
 ("use strict");
-const isMobile = {
+let isMobile = {
   Android: function () {
     return navigator.userAgent.match(/Android/i);
   },

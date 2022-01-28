@@ -4,7 +4,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("form");
-  console.log(form);
+  // console.log(form);
   form.addEventListener("submit", formSend);
 
   async function formSend(event) {
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (response.ok) {
         let result = await response.json();
         alert(result.message);
-        formPreview.inner = "";
+        // formPreview.innerHTML = ""; // clean filepreview after sending
         form.reset();
         form.classList.remove("_sending");
       } else {

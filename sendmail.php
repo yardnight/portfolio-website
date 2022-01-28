@@ -2,7 +2,7 @@
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exeption;
 
-    require 'phpmailer/src/Exeption.php';
+    require 'phpmailer/src/Exception.php';
     require 'phpmailer/src/PHPMailer.php';
 
     $mail = new PHPMailer(true);
@@ -10,7 +10,7 @@
     $mail->setLanguage('ru', 'phpmailer/language/');
     $mail->IsHTML(true);
     // From
-    $mail->setForm('yardnight@gmail.com', 'Offer to work');
+    $mail->setFrom('yardnight@gmail.com', 'Offer to work');
     // Where
     $mail->addAddress('yardnight@gmail.com');
     //Topic of the mail

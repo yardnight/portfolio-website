@@ -229,17 +229,17 @@ body[data-theme=light] {
   --color-ln: #2f3ad1;
   --color-btnh: #d90429;
   --color-btn: #e63946;
-  --color-btnion: #c400ff;
-  --color-btntext: #f6fcffee;
-  --color-blk: #fdffff;
-  --color-blktr: #f8fffe75;
-  --color-shdw: #2b2d42;
-  --color-shdwtr: #2b2d422c;
   --color-backprime: #f1faee;
   --color-backscnd: #edf2f4f3;
   --color-backthrd: #a8dadc80;
+  --color-bliccnt: #ffffff3a;
+  --color-blk: #fdffff;
+  --color-blktr: #f8fffe75;
+  --color-btnion: #c400ff;
+  --color-btntext: #f6fcffee;
   --color-menu: #edf2f4f3;
   --color-menucrs: #e63946;
+  --color-label: #00b0b9;
   --color-text: #2b2d42;
   --color-ionprm: #00afb9;
   --color-ionscn: #03c7d1;
@@ -250,14 +250,16 @@ body[data-theme=light] {
   --color-refh: #e63946;
   --color-devder: #00afb9;
   --color-field: #fdffff;
+  --color-sun: #fffb00;
   --color-switcher: #00afb9;
   --color-switblk: #ffffffce;
   --color-switsdw: #15151f54;
+  --color-shdw: #2b2d42;
+  --color-shdwtr: #2b2d422c;
   --color-playsgn: #00afb9;
   --color-playion: #00afb9;
   --color-playbgd: #c5fcff80;
   --color-playtrn: #f8f8f8f1;
-  --color-bliccnt: #ffffff11;
 }
 
 body[data-theme=dark] {
@@ -265,19 +267,19 @@ body[data-theme=dark] {
   --color-insta: #f1faee;
   --color-tw: #f1faee;
   --color-ln: #f1faee;
+  --color-backprime: #161616;
+  --color-backscnd: #424242e1;
+  --color-backthrd: #292929cc;
+  --color-bliccnt: #ffffff09;
+  --color-blk: #ffffff33;
+  --color-blktr: #f8fffe15;
   --color-btnh: #00afb9;
   --color-btn: #03c7d1;
   --color-btnion: #00ff00;
   --color-btntext: #f6fcfff3;
-  --color-blk: #ffffff33;
-  --color-blktr: #f8fffe15;
-  --color-shdw: #000000;
-  --color-shdwtr: #00000050;
-  --color-backprime: #161616;
-  --color-backscnd: #424242e1;
-  --color-backthrd: #29292980;
   --color-menu: #424242e8;
   --color-menucrs: #ff0266;
+  --color-label: #63d6c4;
   --color-text: #f3f1f1;
   --color-ionprm: #00afb9;
   --color-ionscn: #03c7d1;
@@ -288,15 +290,16 @@ body[data-theme=dark] {
   --color-refh: #ff7597;
   --color-devder: #63d6c4;
   --color-field: #616161;
-  --color-sun: rgb(255, 251, 0);
+  --color-sun: #fffb00;
   --color-switcher: #00afb9;
   --color-switblk: #ffffffef;
   --color-switsdw: #15151f62;
+  --color-shdw: #000000;
+  --color-shdwtr: #00000050;
   --color-playsgn: #ffffff;
   --color-playion: #ffffff;
   --color-playbgd: #90bbbd80;
   --color-playtrn: #2e2e2e81;
-  --color-bliccnt: #ffffff0a;
 }
 
 * {
@@ -1704,8 +1707,8 @@ body.ie ._ibg img {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   overflow: hidden;
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   position: relative;
 }
 
@@ -1812,7 +1815,7 @@ body.ie ._ibg img {
 
 .contact__row100 .col .agreementBox .checkbox__label {
   font-family: inherit;
-  color: var(--color-switcher);
+  color: var(--color-label);
   font-size: 1.1rem;
   display: inline-flex;
   line-height: 140%;
