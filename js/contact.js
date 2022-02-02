@@ -4,7 +4,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("form");
-  // console.log(form);
+  let isChild = false;
   form.addEventListener("submit", formSend);
 
   async function formSend(event) {
@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let formData = new FormData(form);
     // formData.append('image', formImage.files[0]);
-    // console.log(formData);
+    const uncomplitAlert = document.getElementById("alert");
+    let outFieled = document.createElement("div");
 
     if (error === 0) {
       form.classList.add("_sending");
@@ -21,18 +22,42 @@ document.addEventListener("DOMContentLoaded", function () {
         method: "POST",
         body: formData,
       });
+
       if (response.ok) {
         let result = await response.json();
-        alert(result.message);
+        // alert(result.message);
         // formPreview.innerHTML = ""; // clean filepreview after sending
         form.reset();
         form.classList.remove("_sending");
+        if (uncomplitAlert.hasChildNodes() === true) {
+          uncomplitAlert.firstElementChild.remove();
+          isChild = true;
+        }
+        // uncomplitAlert.firstElementChild.remove();
+        outFieled.classList.add("col", "ok");
+        outFieled.innerHTML = `${result.message}`;
+        uncomplitAlert.appendChild(outFieled);
       } else {
         alert("An error");
         form.classList.remove("_sending");
+        uncomplitAlert.firstElementChild.remove();
       }
     } else {
-      alert("Please fill out all fields");
+      // const uncomplitAlert = document.getElementById("alert");
+      if (uncomplitAlert.hasChildNodes() === true) {
+        uncomplitAlert.firstElementChild.remove();
+        isChild = true;
+      }
+      // let outFieled = document.createElement("div");
+      outFieled.classList.add("col", "alert");
+      outFieled.innerHTML = "Please fill out the highlighted fields!";
+      if (isChild === false) {
+        uncomplitAlert.appendChild(outFieled);
+      } else {
+        outFieled.innerHTML = "Ah... Put checkbox mark back";
+        outFieled.classList.add("dumby");
+        uncomplitAlert.appendChild(outFieled);
+      }
     }
   }
 
