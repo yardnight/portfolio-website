@@ -1,15 +1,15 @@
-class Blog{
-    constructor(name, time, subject, message, imageName){
-        this.name=name;
-        this.time=time;
-        this.subject=subject;
-        this.message=message;
-        this.imageName=imageName;
+class Blog {
+    constructor(name, time, subject, message, imageName) {
+        this.name = name;
+        this.time = time;
+        this.subject = subject;
+        this.message = message;
+        this.imageName = imageName;
         // this.imageSrc="img/works/"+ this.imageName + ".png";
         // this.imageClass="svg-iconskills--"+ this.imageName + "-dims";
         // this.imageAlt="image"+ this.imageName
     }
-};
+}
 export var blogData = [
     new Blog(
         "Try OOP",
@@ -41,7 +41,7 @@ export var blogData = [
     ),
     new Blog(
         "Dark theme included",
-        ">30 Aug 2021",
+        "30 Aug 2021",
         "Blog, JavaScript",
         "A few days I tried to make my blog site with dark theme inside. Even I did it in several days myself but a dark theme switcher every time after reloading page appears default again. Found a good solution implemented for Tilda. Small correction in my code and now it works at last.",
         "06"
@@ -120,7 +120,7 @@ export var blogData = [
         "Engineering Summary",
         "14 Apr 2021",
         "Impressions, Life story",
-        " One month has gone after I went out from my last job. Understood that I do not want to be engineer in Ukraine any more. I realised that Informational Technologies more attractive for me. I've got some experience in it when have been buisy with my PhD thesis.", 
+        "One month has gone after I went out from my last job. Understood that I do not want to be engineer in Ukraine any more. I realised that Informational Technologies more attractive for me. I've got some experience in it when have been buisy with my PhD thesis.",
         "06"
     ),
 ];
