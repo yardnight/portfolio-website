@@ -51,7 +51,7 @@
   display: block;
 }
 
-/*=======================<common>======================*/
+/*=======================<skills>======================*/
 
 ._icon-css3:before {
   content: "\e800";
@@ -89,7 +89,7 @@
   content: "\e808";
 }
 
-/*=======================<specify>======================*/
+/*=======================<social>======================*/
 
 ._icon-fb::before {
   content: "\e900";
@@ -178,7 +178,7 @@
   content: "\e913";
 }
 
-._icon-instagram-fill:before {
+._icon-insta-fill:before {
   content: "\e914";
 }
 
@@ -214,7 +214,7 @@
   content: "\e91c";
 }
 
-._icon-insta-fill:before {
+._icon-back-arrow:before {
   content: "\e91d";
 }
 
@@ -718,6 +718,54 @@ body.ie ._ibg img {
   max-width: 100%;
 }
 
+@-webkit-keyframes title-motion {
+  0% {
+    position: relative;
+    left: -100vh;
+  }
+
+  100% {
+    position: relative;
+    left: 0;
+  }
+}
+
+@keyframes title-motion {
+  0% {
+    position: relative;
+    left: -100vh;
+  }
+
+  100% {
+    position: relative;
+    left: 0;
+  }
+}
+
+@-webkit-keyframes text-motion {
+  0% {
+    position: relative;
+    left: 100vh;
+  }
+
+  100% {
+    position: relative;
+    left: 0;
+  }
+}
+
+@keyframes text-motion {
+  0% {
+    position: relative;
+    left: 100vh;
+  }
+
+  100% {
+    position: relative;
+    left: 0;
+  }
+}
+
 .button-box {
   position: relative;
   display: flex;
@@ -730,6 +778,12 @@ body.ie ._ibg img {
   height: 50px;
   background: var(--color-backprime);
   transition: 0.5s ease;
+  -webkit-animation-name: title-motion;
+          animation-name: title-motion;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 .button-box::before {
@@ -1971,7 +2025,7 @@ body.ie ._ibg img {
   --text-color: #2b2d42;
   --text-color-light: #457b9d;
   --title-color: #1d3557;
-  --lamp-color: #ff0055;
+  --lamp-color: #00afb9;
   /*=======================<Font and typography>======================*/
   --body-font: "Poppins", sans-serif;
   --h1-font-size: 1.5rem;
@@ -2015,10 +2069,6 @@ body.dark-theme {
   font-size: 2rem;
   cursor: pointer;
   text-shadow: 0 0 5px var(--lamp-color);
-}
-
-.change-theme:hover {
-  color: var(--text-color-light);
 }
 
 /*=======================<Font size variables>======================*/
@@ -2683,7 +2733,7 @@ body.scale-cv {
     width: 150px;
     height: 150px;
     position: relative;
-    margin: 0px 0 10px 0;
+    margin: 0px 0 5px 0;
   }
 }
 
@@ -2696,12 +2746,24 @@ body.scale-cv {
   .hello__title {
     margin: 10px 0 20px 0;
     font-size: 1.5rem;
+    -webkit-animation-name: title-motion;
+            animation-name: title-motion;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
   }
 
   .hello__text {
     margin: 0 0 25px 0;
     line-height: 1.6rem;
     font-size: 1.2rem;
+    -webkit-animation-name: text-motion;
+            animation-name: text-motion;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
   }
 
   .hello__avatar {
@@ -2709,7 +2771,7 @@ body.scale-cv {
     width: 170px;
     height: 170px;
     position: relative;
-    margin: 0px 0 10px 0;
+    margin: 0px 0 5px 0;
   }
 
   .hard-skills__header {
@@ -2790,6 +2852,10 @@ body.scale-cv {
     height: 80vh;
   }
 
+  .hello__content {
+    padding: 18px 0px 0px 0px;
+  }
+
   .hello__title {
     margin: 0 0 20px 0;
     font-size: 2rem;
@@ -2802,11 +2868,11 @@ body.scale-cv {
   }
 
   .hello__avatar {
-    flex: 0 0 170px;
-    width: 170px;
-    height: 170px;
+    flex: 0 0 150px;
+    width: 150px;
+    height: 150px;
     position: relative;
-    margin: 0px 0 20px 0;
+    margin: 0px 0 5px 0;
   }
 
   .hard-skills__header {
