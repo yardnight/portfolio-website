@@ -712,16 +712,20 @@ body.ie ._ibg img {
   overflow: hidden;
   box-shadow: 5px 5px 8px var(--color-shdwtr);
   transition: 0.5s;
+  -webkit-animation: right-motion;
+          animation: right-motion;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .hello__avatar img {
   max-width: 100%;
 }
 
-@-webkit-keyframes title-motion {
+@-webkit-keyframes left-motion {
   0% {
     position: relative;
-    left: -100vh;
+    left: -100vw;
   }
 
   100% {
@@ -730,10 +734,10 @@ body.ie ._ibg img {
   }
 }
 
-@keyframes title-motion {
+@keyframes left-motion {
   0% {
     position: relative;
-    left: -100vh;
+    left: -100vw;
   }
 
   100% {
@@ -742,7 +746,7 @@ body.ie ._ibg img {
   }
 }
 
-@-webkit-keyframes text-motion {
+@-webkit-keyframes right-motion {
   0% {
     position: relative;
     left: 100vh;
@@ -754,7 +758,7 @@ body.ie ._ibg img {
   }
 }
 
-@keyframes text-motion {
+@keyframes right-motion {
   0% {
     position: relative;
     left: 100vh;
@@ -778,8 +782,8 @@ body.ie ._ibg img {
   height: 50px;
   background: var(--color-backprime);
   transition: 0.5s ease;
-  -webkit-animation-name: title-motion;
-          animation-name: title-motion;
+  -webkit-animation-name: left-motion;
+          animation-name: left-motion;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-timing-function: ease-in-out;
@@ -2746,8 +2750,8 @@ body.scale-cv {
   .hello__title {
     margin: 10px 0 20px 0;
     font-size: 1.5rem;
-    -webkit-animation-name: title-motion;
-            animation-name: title-motion;
+    -webkit-animation-name: left-motion;
+            animation-name: left-motion;
     -webkit-animation-duration: 1s;
             animation-duration: 1s;
     -webkit-animation-timing-function: ease-in-out;
@@ -2758,8 +2762,8 @@ body.scale-cv {
     margin: 0 0 25px 0;
     line-height: 1.6rem;
     font-size: 1.2rem;
-    -webkit-animation-name: text-motion;
-            animation-name: text-motion;
+    -webkit-animation-name: right-motion;
+            animation-name: right-motion;
     -webkit-animation-duration: 2s;
             animation-duration: 2s;
     -webkit-animation-timing-function: ease-in-out;
@@ -3072,6 +3076,10 @@ body.scale-cv {
     margin: 0 15px 25px 0;
     line-height: 1.2rem;
     font-size: 1rem;
+    -webkit-animation-name: left-motion;
+            animation-name: left-motion;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
   }
 
   .hello__avatar {
