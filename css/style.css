@@ -1106,7 +1106,7 @@ body.ie ._ibg img {
 }
 
 .extra-skills__content {
-  width: 100%;
+  width: auto;
   display: flex;
   padding: 0px 0;
   margin: 0px 0 2vh 0;
@@ -1122,7 +1122,7 @@ body.ie ._ibg img {
   border-radius: 6px;
   color: var(--color-text);
   cursor: pointer;
-  margin-right: 8px;
+  margin: 8px 8px 0 0;
   flex: 1;
   box-sizing: border-box;
   display: flex;
@@ -2789,6 +2789,7 @@ body.scale-cv {
 
   .hard-skills__content {
     margin: 0px 0 3vh 0;
+    flex-wrap: wrap;
   }
 
   .hard-skills__slide {

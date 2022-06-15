@@ -1,55 +1,58 @@
-import {blogData} from './data-blog.min.js';
-import {skillsData} from './data-skills.min.js';
+import { blogData } from "./data-blog.min.js";
+import { skillsData } from "./data-skills.min.js";
 
 //===================<Skills SLIDER>========================================================
 
 var hard = skillsData.hardSkills;
-var extra = skillsData.extraSkills; 
- 
+var extra = skillsData.extraSkills;
+
 buildSkills(hard);
 buildSkills(extra);
 
-function buildSkills(skillItems){
+function buildSkills(skillItems) {
     const blockOfSkills = document.getElementById(`${skillItems.skillId}`);
-    for (let i=0; i<skillItems.skillData.length; i++){
+    for (let i = 0; i < skillItems.skillData.length; i++) {
         let skillItem = document.createElement("div");
         skillItem.classList.add(`${skillItems.skillClass}`);
 
         skillItem.innerHTML = skillItems.skillContent(i);
+        // if (i<6){
         blockOfSkills.appendChild(skillItem);
+        // } else {
+
+        // }
     }
-};
+}
 
 //===================<SKILLS SLIDER>=========================================
 slidesPlugin(2);
 
 function slidesPlugin(activeSlide = 2) {
-    const hardSkills = document.querySelectorAll('.hard-skills__slide');
-    const extraSkills = document.querySelectorAll('.extra-skills__slide');
-   
-    hardSkills[activeSlide].classList.add('active');
-    var activeExSlide = extraSkills.length-activeSlide;
-    extraSkills[activeExSlide].classList.add('active');
+    const hardSkills = document.querySelectorAll(".hard-skills__slide");
+    const extraSkills = document.querySelectorAll(".extra-skills__slide");
+
+    hardSkills[activeSlide].classList.add("active");
+    var activeExSlide = extraSkills.length - activeSlide;
+    extraSkills[activeExSlide].classList.add("active");
     eventLook(hardSkills);
     eventLook(extraSkills);
 
     // tracking clicking on a skillslide
-    function eventLook(slides){
+    function eventLook(slides) {
         for (const slide of slides) {
-            slide.addEventListener('click', () => { 
-                               
+            slide.addEventListener("click", () => {
                 clearActiveClasses(slides);
-                slide.classList.add('active')
-            })
+                slide.classList.add("active");
+            });
         }
     }
     // cleaning activity
     function clearActiveClasses(slides) {
         slides.forEach((slide) => {
-            slide.classList.remove('active')
-        })
+            slide.classList.remove("active");
+        });
     }
-};
+}
 //===================<SKILLS SLIDER END>=========================================
 
 //======================<STATIC>=========================
@@ -82,7 +85,7 @@ function slidesPlugin(activeSlide = 2) {
 //         console.log("HTML skills amount doesnt mutch js skill's amount")
 //     }
 //     var skillIconSources = document.querySelectorAll('.hard-skills__slide .icon-box source');
-    
+
 //     for (var i=0; i<skillIconSources.length; i++) {
 //         skillIconSources[i].srcset = skills[i].iconSrc;
 //     }
@@ -96,20 +99,17 @@ function slidesPlugin(activeSlide = 2) {
 
 //======================<STATIC>=========================
 
-
 //===================<Resent post>==========================================================
 
 recentPosts(blogData);
 
-function recentPosts(data){
-
+function recentPosts(data) {
     const postsSection = document.getElementById("recent-blog");
 
-    for (let i=0; i<2; i++){
+    for (let i = 0; i < 2; i++) {
         let recentPost = document.createElement("div");
         recentPost.classList.add("recent-posts__column");
-        recentPost.innerHTML= 
-        `<article class="recent-posts__item recent-post">
+        recentPost.innerHTML = `<article class="recent-posts__item recent-post">
             <a href="blog.html" class="recent-post__title ">
             ${data[i].name}
             </a>
@@ -123,7 +123,6 @@ function recentPosts(data){
 
         postsSection.appendChild(recentPost);
     }
-};
+}
 
 //===================<Resent post>==========================================================
-

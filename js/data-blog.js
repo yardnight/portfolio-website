@@ -12,7 +12,14 @@ class Blog {
 }
 export var blogData = [
     new Blog(
-        "Try OOP",
+        "Learning animation",
+        "15 Jun 2022",
+        "Home page, CSS",
+        "Perhaps my home page had a boring look so I gonna try to make it more a live by CSS animation tool",
+        "06"
+    ),
+    new Blog(
+        "Using OOP",
         "17 Jan 2022",
         "Skills, JS",
         "I decided to update the skills section on the home page of my portfolio site. I realised that I can to use a function to fill my skills rows from an object. It allows me to add a new skill by editing the skill-object.",
