@@ -11,17 +11,46 @@ buildSkills(extra);
 
 function buildSkills(skillItems) {
     const blockOfSkills = document.getElementById(`${skillItems.skillId}`);
-    for (let i = 0; i < skillItems.skillData.length; i++) {
-        let skillItem = document.createElement("div");
-        skillItem.classList.add(`${skillItems.skillClass}`);
-
-        skillItem.innerHTML = skillItems.skillContent(i);
-        // if (i<6){
-        blockOfSkills.appendChild(skillItem);
-        // } else {
-
-        // }
+    let setInRow = 6;
+    let numBlocks = skillItems.skillData.length / setInRow;
+    // console.log(numBlocks);
+    let numRows = 1;
+    if (numBlocks <= 1) {
+        numRows = 1;
+    } else if (numBlocks <= 2) {
+        numRows = 2;
+    } else if (numBlocks <= 3) {
+        numRows = 3;
     }
+    // console.log("numRows", numRows);
+
+    let skillRow = [];
+    let leavesInRow = skillItems.skillData.length;
+    let countInRow = setInRow;
+    for (let i = 0; i < numRows; i++) {
+        // console.log("Passed:", i);
+        // console.log("leavesInRow:", leavesInRow);
+        if (leavesInRow < setInRow) {
+            countInRow = leavesInRow;
+        }
+
+        skillRow[i] = document.createElement("div");
+        skillRow[i].classList.add("hard-skills__row");
+        if (leavesInRow < setInRow) {
+            skillRow[i].classList.add("small__row");
+        }
+        blockOfSkills.appendChild(skillRow[i]);
+        for (let j = setInRow * i; j < setInRow * i + countInRow; j++) {
+            // console.log("j num:", j);
+            let skillItem = document.createElement("div");
+            skillItem.classList.add(`${skillItems.skillClass}`);
+
+            skillItem.innerHTML = skillItems.skillContent(j);
+            skillRow[i].appendChild(skillItem);
+        }
+        leavesInRow = leavesInRow - setInRow;
+    }
+    // }
 }
 
 //===================<SKILLS SLIDER>=========================================
@@ -125,4 +154,4 @@ function recentPosts(data) {
     }
 }
 
-//===================<Resent post>==========================================================
+//===================<Resent post>=========================================================

@@ -861,7 +861,7 @@ body.ie ._ibg img {
   padding: 0;
 }
 
-.hard-skills__content {
+.hard-skills__row {
   width: 100%;
   display: flex;
   padding: 0px 0;
@@ -869,6 +869,12 @@ body.ie ._ibg img {
   min-height: 100px;
   height: 10vh;
   justify-content: center;
+  align-items: center;
+}
+
+.hard-skills__content {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -962,6 +968,11 @@ body.ie ._ibg img {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+
+.small__row {
+  width: 60%;
+  display: inline-flex;
 }
 
 /*=======================<SKILLS-BAR>======================*/
@@ -1106,6 +1117,12 @@ body.ie ._ibg img {
 }
 
 .extra-skills__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.extra-skills__row {
   width: auto;
   display: flex;
   padding: 0px 0;
@@ -2787,7 +2804,7 @@ body.scale-cv {
     margin: 0 0;
   }
 
-  .hard-skills__content {
+  .hard-skills__row {
     margin: 0px 0 3vh 0;
     flex-wrap: wrap;
   }
@@ -2827,7 +2844,7 @@ body.scale-cv {
     font-size: 1.6rem;
   }
 
-  .extra-skills__content {
+  .extra-skills__row {
     margin: 0px 0 3vh 0;
   }
 
@@ -2888,7 +2905,7 @@ body.scale-cv {
     font-size: 1.8rem;
   }
 
-  .hard-skills__content {
+  .hard-skills__row {
     margin: 0px 0 3vh 0;
   }
 
@@ -2926,7 +2943,7 @@ body.scale-cv {
     font-size: 1.6rem;
   }
 
-  .extra-skills__content {
+  .extra-skills__row {
     margin: 0px 0 3vh 0;
   }
 
@@ -2981,7 +2998,7 @@ body.scale-cv {
     font-size: 1.5rem;
   }
 
-  .hard-skills__content {
+  .hard-skills__row {
     margin: 0px 0 3vh 0;
   }
 
@@ -3019,7 +3036,7 @@ body.scale-cv {
     font-size: 1.4rem;
   }
 
-  .extra-skills__content {
+  .extra-skills__row {
     margin: 0px 0 3vh 0;
   }
 
@@ -3099,7 +3116,7 @@ body.scale-cv {
     font-size: 1.5rem;
   }
 
-  .hard-skills__content {
+  .hard-skills__row {
     margin: 0px 0 10vh 0;
   }
 
@@ -3138,7 +3155,7 @@ body.scale-cv {
     font-size: 1.4rem;
   }
 
-  .extra-skills__content {
+  .extra-skills__row {
     margin: 0px 0 10vh 0;
   }
 
@@ -3238,7 +3255,7 @@ body.scale-cv {
     font-size: 1.8rem;
   }
 
-  .hard-skills__content {
+  .hard-skills__row {
     margin: 0px 0 10vh 0;
   }
 
@@ -3279,7 +3296,7 @@ body.scale-cv {
     font-size: 1.6rem;
   }
 
-  .extra-skills__content {
+  .extra-skills__row {
     margin: 0px 0 10vh 0;
   }
 
@@ -3359,7 +3376,7 @@ body.scale-cv {
     font-size: 2rem;
   }
 
-  .hard-skills__content {
+  .hard-skills__row {
     margin: 0px 0 10vh 0;
   }
 
@@ -3391,7 +3408,7 @@ body.scale-cv {
     font-size: 1.8rem;
   }
 
-  .extra-skills__content {
+  .extra-skills__row {
     margin: 0px 0 10vh 0;
   }
 
@@ -3451,7 +3468,7 @@ body.scale-cv {
     font-size: 2rem;
   }
 
-  .hard-skills__content {
+  .hard-skills__row {
     margin: 0px 0 15vh 0;
   }
 
@@ -3480,7 +3497,7 @@ body.scale-cv {
     font-size: 1.8rem;
   }
 
-  .extra-skills__content {
+  .extra-skills__row {
     margin: 0px 0 15vh 0;
   }
 
@@ -3557,7 +3574,7 @@ body.scale-cv {
     margin: 0px 0 4vh 0;
   }
 
-  .hard-skills__content {
+  .hard-skills__row {
     margin: 0px 0 8vh 0;
   }
 
@@ -3597,7 +3614,7 @@ body.scale-cv {
     margin: 0px 0 3vh 0;
   }
 
-  .extra-skills__content {
+  .extra-skills__row {
     margin: 0px 0 8vh 0;
   }
 
@@ -3771,7 +3788,7 @@ body.scale-cv {
     margin: 0px 0 10vh 0;
   }
 
-  .hard-skills__content {
+  .hard-skills__row {
     margin: 0px 0 20vh 0;
   }
 
@@ -3806,7 +3823,7 @@ body.scale-cv {
     margin: 0px 0 10vh 0;
   }
 
-  .extra-skills__content {
+  .extra-skills__row {
     margin: 0px 0 18vh 0;
   }
 
@@ -3899,7 +3916,7 @@ body.scale-cv {
     margin: 0px 0 10vh 0;
   }
 
-  .hard-skills__content {
+  .hard-skills__row {
     margin: 0px 0 15vh 0;
   }
 
@@ -3932,7 +3949,7 @@ body.scale-cv {
     margin: 0px 0 5vh 0;
   }
 
-  .extra-skills__content {
+  .extra-skills__row {
     margin: 0px 0 15vh 0;
   }
 
