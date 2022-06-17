@@ -52,6 +52,16 @@ function buildSkills(skillItems) {
     }
     // }
 }
+/*==================== HIDE SCROLL ARROW ====================*/
+function scrollHome() {
+    const scrollHome = document.getElementById("scroll-down");
+    // When the scroll is higher than 200 viewport height,
+    // add the show-scroll class to the a tag with the scroll-top class
+    console.log("Y:", this.window.pageYOffset);
+    if (this.window.pageYOffset >= 100) scrollHome.classList.add("hide");
+    else scrollHome.classList.remove("hide");
+}
+window.addEventListener("scroll", scrollHome);
 
 //===================<SKILLS SLIDER>=========================================
 slidesPlugin(2);

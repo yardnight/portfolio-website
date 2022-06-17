@@ -222,6 +222,15 @@
   content: "\e91e";
 }
 
+._icon-down-arrow:before {
+  content: "\e91f";
+}
+
+._icon-scroll-down:before {
+  content: "\e920";
+  color: #03e29f;
+}
+
 body[data-theme=light] {
   --color-fb: #2f7bd1;
   --color-insta: #c400ff;
@@ -697,6 +706,13 @@ body.ie ._ibg img {
   font-size: 1rem;
 }
 
+.hello__link-block {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .hello__btn {
   margin: 0 0 25px 0;
 }
@@ -768,6 +784,119 @@ body.ie ._ibg img {
     position: relative;
     left: 0;
   }
+}
+
+@-webkit-keyframes down-arrow {
+  0% {
+    top: -2vh;
+    opacity: 0.2;
+  }
+
+  30% {
+    top: 2vh;
+  }
+
+  40% {
+    top: 0vh;
+  }
+
+  60% {
+    top: 2vh;
+    opacity: 1;
+  }
+
+  70% {
+    top: 1vh;
+  }
+
+  100% {
+    top: 2vh;
+    opacity: 0.1;
+  }
+}
+
+@keyframes down-arrow {
+  0% {
+    top: -2vh;
+    opacity: 0.2;
+  }
+
+  30% {
+    top: 2vh;
+  }
+
+  40% {
+    top: 0vh;
+  }
+
+  60% {
+    top: 2vh;
+    opacity: 1;
+  }
+
+  70% {
+    top: 1vh;
+  }
+
+  100% {
+    top: 2vh;
+    opacity: 0.1;
+  }
+}
+
+@-webkit-keyframes insiration {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes insiration {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.hide {
+  display: none !important;
+}
+
+.scroll-down {
+  display: flex;
+  position: relative;
+  width: 50px;
+  justify-content: center;
+  align-items: center;
+  top: -2vh;
+  left: -10%;
+  -webkit-animation-name: down-arrow;
+          animation-name: down-arrow;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.scroll-down .arrow {
+  font-size: 2rem;
+  text-shadow: 0px 0px 15px #03e29f;
+  -webkit-animation-name: insiration;
+          animation-name: insiration;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 .button-box {
