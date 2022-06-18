@@ -884,8 +884,8 @@ body.ie ._ibg img {
           animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 .scroll-down .arrow {
@@ -893,10 +893,11 @@ body.ie ._ibg img {
   text-shadow: 0px 0px 15px #03e29f;
   -webkit-animation-name: insiration;
           animation-name: insiration;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
+  cursor: pointer;
 }
 
 .button-box {
