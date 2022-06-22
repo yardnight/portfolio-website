@@ -9,6 +9,10 @@ class Skill {
     }
 }
 //=======================<NEW>=============================
+
+// import { skillsVar } from "./variables.js";
+// console.log(skillsVar);
+
 export var skillsData = {
     hardSkills: {
         skillId: "hard-skill-section",
@@ -20,6 +24,8 @@ export var skillsData = {
             new Skill("SASS", 60, "sass"),
             new Skill("GULP", 50, "gulp"),
             new Skill("GIT", 70, "git"),
+            new Skill("React", 10, "react"),
+            new Skill("SQL", 30, "sql"),
         ],
         skillContent(params) {
             return `<h3>${this.skillData[params].name}</h3>

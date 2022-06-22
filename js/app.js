@@ -1,17 +1,22 @@
 import { blogData } from "./data-blog.min.js";
 import { skillsData } from "./data-skills.min.js";
+// import { skillsVar } from "./variables.min.js";
+
+//===================<Skills ROWS SPLITTING>================================================
+
+//===================<Skills ROWS SPLITTING>================================================
 
 //===================<Skills SLIDER>========================================================
 
 var hard = skillsData.hardSkills;
 var extra = skillsData.extraSkills;
 
-buildSkills(hard);
-buildSkills(extra);
+buildSkills(hard, 5);
+buildSkills(extra, 4);
 
-function buildSkills(skillItems) {
+function buildSkills(skillItems, setInRow) {
     const blockOfSkills = document.getElementById(`${skillItems.skillId}`);
-    let setInRow = 6;
+    // let setInRow = 6;
     let numBlocks = skillItems.skillData.length / setInRow;
     // console.log(numBlocks);
     let numRows = 1;
@@ -57,7 +62,7 @@ function scrollHome() {
     const scrollHome = document.getElementById("scroll-down");
     // When the scroll is higher than 200 viewport height,
     // add the show-scroll class to the a tag with the scroll-top class
-    console.log("Y:", this.window.pageYOffset);
+    // console.log("Y:", this.window.pageYOffset);
     if (this.window.pageYOffset >= 100) scrollHome.classList.add("hide");
     else scrollHome.classList.remove("hide");
 }
