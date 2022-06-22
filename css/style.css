@@ -677,7 +677,7 @@ body.ie ._ibg img {
 
 .hello__container {
   display: flex;
-  height: 76vh;
+  height: 70vh;
   text-align: center;
   align-items: center;
   flex-direction: column-reverse;
@@ -2894,7 +2894,7 @@ body.scale-cv {
 
 @media (min-width: 359.98px) {
   .hello__container {
-    height: 78vh;
+    height: 73vh;
     margin: 10px 0 50px 0;
   }
 
@@ -3002,7 +3002,7 @@ body.scale-cv {
 @media (min-width: 374.98px) {
   .hello__container {
     margin: 15px 0 50px 0;
-    height: 78vh;
+    height: 73vh;
   }
 
   .hello__content {
