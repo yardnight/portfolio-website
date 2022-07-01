@@ -12,6 +12,13 @@ class Blog {
 }
 export var blogData = [
     new Blog(
+        "Sass mixins",
+        "01 Jul 2022",
+        "JS manages SASS, SCSS",
+        "I decided to implemente gulp plugins to run sass variables by javaScript code. It allows me to use a file with skills variables for creating both SASS and JS data. To revise my skills block gitting more convenient. By changing skills data from one place now it could be able to impack on css style and JS variables ",
+        "06"
+    ),
+    new Blog(
         "Learning animation",
         "15 Jun 2022",
         "Home page, CSS",

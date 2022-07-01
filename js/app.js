@@ -1,6 +1,5 @@
 import { blogData } from "./data-blog.min.js";
 import { skillsData } from "./data-skills.min.js";
-// import { skillsVar } from "./variables.min.js";
 
 //===================<Skills ROWS SPLITTING>================================================
 
@@ -12,7 +11,7 @@ var hard = skillsData.hardSkills;
 var extra = skillsData.extraSkills;
 
 buildSkills(hard, 5);
-buildSkills(extra, 4);
+buildSkills(extra, 5);
 
 function buildSkills(skillItems, setInRow) {
     const blockOfSkills = document.getElementById(`${skillItems.skillId}`);
@@ -40,7 +39,7 @@ function buildSkills(skillItems, setInRow) {
         }
 
         skillRow[i] = document.createElement("div");
-        skillRow[i].classList.add("hard-skills__row");
+        skillRow[i].classList.add(`${skillItems.skillRow}`);
         if (leavesInRow < setInRow) {
             skillRow[i].classList.add("small__row");
         }
@@ -50,6 +49,7 @@ function buildSkills(skillItems, setInRow) {
             let skillItem = document.createElement("div");
             skillItem.classList.add(`${skillItems.skillClass}`);
 
+            // skillItem.innerHTML = skillItems.skillContent(j);
             skillItem.innerHTML = skillItems.skillContent(j);
             skillRow[i].appendChild(skillItem);
         }
