@@ -1,5 +1,6 @@
 import { blogData } from "./data-blog.min.js";
 import { skillsData } from "./data-skills.min.js";
+import { amountInRow } from "./variables.min.js";
 
 //===================<Skills ROWS SPLITTING>================================================
 
@@ -9,9 +10,10 @@ import { skillsData } from "./data-skills.min.js";
 
 var hard = skillsData.hardSkills;
 var extra = skillsData.extraSkills;
+// let amountInRow = 5;
 
-buildSkills(hard, 5);
-buildSkills(extra, 5);
+buildSkills(hard, amountInRow);
+buildSkills(extra, amountInRow);
 
 function buildSkills(skillItems, setInRow) {
     const blockOfSkills = document.getElementById(`${skillItems.skillId}`);

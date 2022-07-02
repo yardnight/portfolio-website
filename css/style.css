@@ -1014,7 +1014,7 @@ body.ie ._ibg img {
 
 .hard-skills__row.small__row,
 .small__row.extra-skills__row {
-  width: 80% !important;
+  width: 50% !important;
   display: inline-flex;
 }
 
@@ -1281,7 +1281,7 @@ body.ie ._ibg img {
 }
 
 .extra-skills__row.small__row {
-  width: 20% !important;
+  width: 100% !important;
   display: inline-flex;
 }
 
@@ -2862,6 +2862,11 @@ body.scale-cv {
     position: relative;
     margin: 0px 0 5px 0;
   }
+
+  .extra-skills__slide.active h3 {
+    font-size: 1.5rem;
+    right: 1rem;
+  }
 }
 
 @media (min-width: 359.98px) {
@@ -3365,7 +3370,7 @@ body.scale-cv {
   }
 
   .extra-skills__slide.active {
-    flex: 2;
+    flex: 3;
     height: 35vh;
   }
 
@@ -3454,7 +3459,7 @@ body.scale-cv {
   }
 
   .extra-skills__slide.active {
-    flex: 2;
+    flex: 3;
     height: 35vh;
   }
 
@@ -3526,7 +3531,7 @@ body.scale-cv {
   }
 
   .extra-skills__slide.active {
-    flex: 2;
+    flex: 3;
     height: 35vh;
   }
 
@@ -3647,6 +3652,10 @@ body.scale-cv {
   .extra-skills__slide.active {
     flex: 3;
     height: 20vh;
+  }
+
+  .extra-skills__slide.active h3 {
+    font-size: 2rem;
   }
 
   .recent-posts__title a:hover span {
@@ -3852,7 +3861,7 @@ body.scale-cv {
   }
 
   .extra-skills__slide.active {
-    flex: 2;
+    flex: 3;
     height: 50vh;
   }
 
