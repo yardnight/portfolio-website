@@ -15,7 +15,7 @@ export var blogData = [
         "Blog upgrade",
         "Jul 5, 2022",
         "HTML",
-        "The blog looked boring yesterday. Small manipulations with JavaScript to upgrade HTML of the blog page were implemented. A bit practrice to improve my styling skills and to remember SASS. Looks better now I gues.",
+        "The blog looked boring yesterday. Small operations with JavaScript to upgrade HTML of the blog page were implemented. A bit practrice to improve my styling skills and to remember SASS. Looks better now I gues.",
         "blog19"
     ),
     new Blog(
@@ -43,7 +43,7 @@ export var blogData = [
         "An Update for the blog",
         "Jan 10, 2022",
         "CSS",
-        "Using my DOM and JS knowleges adopted the blog as a object with posts. My fearther wishes to make SQL database for store the blog post in there and using a modal window to create new posts straight from the page",
+        "Using my DOM and JS knowleges adopted the blog as a object with posts. My fearther wishes to make SQL database for store the blog post in there and using a modal window to create new posts straight from the page.",
         "blog15"
     ),
     new Blog(
@@ -57,7 +57,7 @@ export var blogData = [
         "Resume included",
         "Sep 5, 2021",
         "Resume",
-        "I found a good form for a resume in the youtube. Some time a while passed and I had implemented it to my portfolio site like a separate web page which you can get if you go through the resume button. It is not an origin form of that resume. I've extend it to add a couple changes that          i belive make it better.",
+        "I found a good form for a resume in the youtube. Some time a while passed and I had implemented it to my portfolio site like a separate web page which you can get if you go through the resume button. It is not an origin form of that resume. I've extend it to add a couple changes that i belive make it better.",
         "blog13"
     ),
     new Blog(
@@ -71,7 +71,7 @@ export var blogData = [
         "Fixed header and its disappearing on the site top",
         "Aug 25, 2021",
         "Blog",
-        "Found good idea how to enhance UX of my site. Fixed header is an excellent solution for convenient site navigation",
+        "Found good idea how to enhance UX of my site. Fixed header is an excellent solution for convenient site navigation.",
         "blog11"
     ),
     new Blog(
@@ -98,7 +98,7 @@ export var blogData = [
     new Blog(
         "5 projects 5 days",
         "Jul 13, 2021",
-        "JS, Marathon",
+        "JavaScript",
         "Minin shared his marathon schadle. Five javascript project for five days training. Looks good. Let's see what are contain. Card Switcher, Drug & Drop, Slider, HoverBoard, Aim training game.",
         "blog7"
     ),
@@ -113,7 +113,7 @@ export var blogData = [
         "Pyton Introduction with GoIt",
         "Jun 21, 2021",
         "Python",
-        "My first meet with Python. We use web trainer. Looks simple until appearing JSON. I am not ready for the shit yet. Let's back in a while",
+        "My first meet with Python. We use web trainer. Looks simple until appearing JSON. I am not ready for the shit yet. Let's back in a while.",
         "blog5"
     ),
     new Blog(
@@ -140,8 +140,8 @@ export var blogData = [
     new Blog(
         "Engineering Summary",
         "Apr 14, 2021",
-        "Impressions",
-        "One month has gone after I went out from my last job. Understood that I do not want to be engineer in Ukraine any more. I realised that Informational Technologies more attractive for me. I've got some experience in it when have been buisy with my PhD thesis.",
+        "LifeStyle",
+        "One month has gone after I went out from my last job. I realized that I do not want to be an engineer in Ukraine. I realised that Informational Technologies more attractive for me. I've got some experience in it when have been buisy with my PhD thesis.",
         "blog1"
     ),
 ];
