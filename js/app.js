@@ -115,10 +115,10 @@ function recentPosts(data) {
         
         <article class="recent-posts__item recent-post">
             <a href="blog.html" class="recent-post__title ">
-            ${data[i].name}
+            ${data[i].title}
             </a>
             <div class="recent-post__info">
-            ${data[i].time} <span>|</span> ${data[i].subject}
+            ${data[i].date} <span>|</span> ${data[i].subject}
             </div>
             <div class="recent-post__text text">
             ${data[i].message}
