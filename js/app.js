@@ -27,7 +27,10 @@ function buildSkills(skillItems, setInRow) {
         numRows = 2;
     } else if (numBlocks <= 3) {
         numRows = 3;
+    } else if (numBlocks <= 4) {
+        numRows = 4;
     }
+
     // console.log("numRows", numRows);
 
     let skillRow = [];
@@ -59,7 +62,47 @@ function buildSkills(skillItems, setInRow) {
     }
     // }
 }
-/*==================== HIDE SCROLL ARROW ====================*/
+
+//=========<small_row extend abit wider when chosen>==============
+
+chosenContain(hard);
+chosenContain(extra);
+
+function chosenContain(skillItems) {
+    const list = document
+        .getElementById(`${skillItems.skillId}`)
+        .querySelectorAll(`.${skillItems.skillRow}`);
+    console.log(list);
+    eventWatcher(list);
+
+    function eventWatcher(list) {
+        // console.log(list.length);
+        for (let item of list) {
+            item.addEventListener("click", () => {
+                // console.log("Click:", item);
+                let small = item.classList;
+                let status = small.contains("small__row");
+                // console.log("small:", small.contains("small__row"), status);
+                if (status) {
+                    // console.log("A small one");
+                    removeClassChosen(list);
+                    item.classList.add("chosen");
+                } else {
+                    // console.log("No small");
+                    removeClassChosen(list);
+                }
+            });
+        }
+    }
+    function removeClassChosen(list) {
+        list.forEach((item) => {
+            item.classList.remove("chosen");
+        });
+    }
+}
+//====<small_row extend abit wider when chosen>=============
+
+//==================== HIDE SCROLL ARROW ====================
 function scrollHome() {
     const scrollHome = document.getElementById("scroll-down");
     // When the scroll is higher than 200 viewport height,
@@ -112,18 +155,30 @@ function recentPosts(data) {
         let recentPost = document.createElement("div");
         recentPost.classList.add("recent-posts__column");
         recentPost.innerHTML = `
+        <div class="recent-post__container">
+            <div class="recent-post__content">
+                <div class="recent-post__info">
+                    <div class="recent-post__infoitems">
+                        <div class = "recent-post__theme"> ${data[i].subject} </div>
+                        <div class = "recent-post__date"> ${data[i].date} </div>
+                    </div>  
+                    
+                </div>
+                <div class="recent-post__title">
+                    <a href="blog.html" class="post-ref">
+                    ${data[i].title}
+                    </a>
+                </div>
+                <div class="recent-post__text text">
+                    ${data[i].message}
+                </div>
+            </div>
+            <div class="recent-post__image">
+                <img src="${data[i].imageSrc}" alt="${data[i].imageAlt}">
+            </div>
+        </div>
         
-        <article class="recent-posts__item recent-post">
-            <a href="blog.html" class="recent-post__title ">
-            ${data[i].title}
-            </a>
-            <div class="recent-post__info">
-            ${data[i].date} <span>|</span> ${data[i].subject}
-            </div>
-            <div class="recent-post__text text">
-            ${data[i].message}
-            </div>
-        </article>
+        
         `;
 
         postsSection.appendChild(recentPost);
