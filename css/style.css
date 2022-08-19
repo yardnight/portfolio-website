@@ -218,7 +218,7 @@
 ._icon-sun:before {
   content: "\e934";
   color: var(--color-sun);
-  text-shadow: 0px 0px 5px, 0 0 0.9rem #ffee00;
+  text-shadow: 0px 0px 5px, 0 0 0.9rem #ffee00c0;
 }
 
 ._icon-insta-fill:before {
@@ -1211,6 +1211,7 @@ body.ie ._ibg img {
 .hard-skills__slide.active .skill-bar,
 .active.extra-skills__slide .skill-bar {
   display: flex;
+  justify-content: space-evenly;
 }
 
 .hard-skills__slide.active .icon-box,
@@ -2390,9 +2391,9 @@ body.ie ._ibg img {
 :root {
   --header-height: 3rem;
   /*=======================<Color Variabels>======================*/
-  --body-color: #f1faee;
+  --body-color: #bac5c3;
   --container-color: #edf2f4;
-  --container-color-alt: #d9dddfe5;
+  --container-color-alt: #ffffff;
   --text-color: #2b2d42;
   --text-color-light: #457b9d;
   --title-color: #1d3557;
@@ -2548,7 +2549,7 @@ body.scale-cv {
   gap: 0.15rem;
 }
 
-.scale-cv .skills__name {
+.scale-cv .skills-res__name {
   margin-bottom: var(--mb-1);
 }
 
@@ -2880,22 +2881,22 @@ body.scale-cv {
 
 /*=======================<Skills>======================*/
 
-.skills__content {
+.skills-res__content {
   justify-content: center;
   grid-template-columns: repeat(2, 1fr);
   gap: 0rem;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
   margin-bottom: 1rem;
 }
 
-.skills__name {
+.skills-res__name {
   display: flex;
   align-items: center;
   margin-bottom: var(--mb-3);
 }
 
-.skills__circle {
+.skills-res__circle {
   display: inline-block;
   width: 5px;
   height: 5px;
@@ -3048,7 +3049,7 @@ body.scale-cv {
   background-color: var(--color-switcher);
   box-shadow: inset 3px 3px 5px var(--color-switblk), inset -5px -5px 8px var(--color-switsdw);
   top: 50%;
-  left: 5px;
+  left: 4px;
   transform: translateY(-50%);
   transition: 0.5s ease;
 }
@@ -3060,7 +3061,7 @@ body.scale-cv {
 
 .menu__switcher input:checked + label::after {
   background-color: var(--color-switcher);
-  left: calc(100% - 25px);
+  left: calc(100% - 23px);
   box-shadow: inset 3px 3px 5px var(--color-switblk), inset -5px -5px 8px var(--color-switsdw);
 }
 
@@ -3236,7 +3237,7 @@ body.scale-cv {
     flex: 3;
   }
 
-  .skills__content {
+  .skills-res__content {
     grid-template-columns: repeat(3, 1fr);
     -moz-column-gap: 2rem;
          column-gap: 2rem;
@@ -3447,7 +3448,7 @@ body.scale-cv {
     padding-bottom: 0.5rem;
   }
 
-  .skills__content {
+  .skills-res__content {
     grid-template-columns: repeat(3, 1fr);
     -moz-column-gap: 2rem;
          column-gap: 2rem;
@@ -4161,7 +4162,7 @@ body.scale-cv {
   .resume {
     display: grid;
     grid-template-columns: 0.5fr 1fr;
-    background-color: var(--body-color);
+    background-color: var(--container-color-alt);
     box-shadow: 0 0 8px var(--text-color);
   }
 
@@ -4202,7 +4203,7 @@ body.scale-cv {
     text-align: initial;
   }
 
-  .skills__content {
+  .skills-res__content {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -4616,7 +4617,7 @@ body.scale-cv {
     margin-bottom: 0rem;
   }
 
-  .skills__content {
+  .skills-res__content {
     grid-template-columns: repeat(2, 1fr);
   }
 
