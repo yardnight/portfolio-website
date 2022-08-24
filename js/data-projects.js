@@ -31,6 +31,6 @@ function createProjectsData(projects) {
 		);
 		projectsData.push(project);
 	});
-	console.log("projectsData:", projectsData);
+	// console.log("projectsData:", projectsData);
 	return projectsData;
 }

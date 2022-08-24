@@ -32,6 +32,6 @@ function createBlogData(blogPostsData) {
 		);
 		blogData.push(post);
 	});
-	console.log("blogData:", blogData);
+	// console.log("blogData:", blogData);
 	return blogData;
 }
