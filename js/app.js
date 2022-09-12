@@ -3,15 +3,10 @@ import { skillsData } from "./data-skills.min.js";
 import { amountInRow } from "./variables.min.js";
 import { projectsData } from "./data-projects.min.js";
 
-//===================<Skills ROWS SPLITTING>================================================
-
-//===================<Skills ROWS SPLITTING>================================================
-
 //===================<Skills SLIDER>========================================================
 
 var hard = skillsData.hardSkills;
 var extra = skillsData.extraSkills;
-// let amountInRow = 5;
 
 buildSkills(hard, amountInRow);
 buildSkills(extra, amountInRow);
@@ -190,7 +185,7 @@ function recentPosts(data) {
 
 //====================<Favorite Works>======================================================
 let favProjectsData = [];
-const IndexOfFavProjectData = [9, 8, 7, 6, 5, 4, 2];
+const IndexOfFavProjectData = [9, 8, 7, 6, 5, 4, 3];
 
 IndexOfFavProjectData.forEach((num) => {
 	projectsData.forEach(
@@ -210,12 +205,12 @@ function favoriteProjects(data) {
 		favProject.classList.add("works__item");
 		favProject.innerHTML = `
         <div class="img-box">
-            <a href="article${data[i].id}.html" class="works__image _ibg">
-                <img src="${data[i].imageSrc}" alt="${data[i].imageAlt}">
+            <a href="article.html" class="works__image _ibg">
+                <img src="${data[i].reviewImageSrc}" alt="${data[i].reviewImageAlt}">
             </a>
         </div>
         <div class="works__body">
-            <a href="article${data[i].id}.html" class="works__title">${data[i].title}</a>
+            <a href="article.html" class="works__title">${data[i].title}</a>
             <div class="works__info">
                 <div class="works__year">${data[i].date}</div>
                 <div class="works__category">${data[i].category}</div>
@@ -231,3 +226,11 @@ function favoriteProjects(data) {
 }
 
 //====================<Favorite Works>======================================================
+const favProjects = document.querySelectorAll(".works__item");
+let projectInfo = {};
+favProjects.forEach((favProject, index) => {
+	favProject.addEventListener("click", () => {
+		projectInfo = favProjectsData[index];
+		localStorage.setItem("projectInfoData", JSON.stringify(projectInfo));
+	});
+});

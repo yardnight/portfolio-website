@@ -1,13 +1,32 @@
 class Project {
-	constructor(index, title, date, category, description, projectsAmount) {
+	constructor(
+		index,
+		title,
+		date,
+		category,
+		description,
+		projectsAmount,
+		gitHubRepository,
+		gitHubPage,
+		reviewInfo,
+		mainInfo,
+		detailInfo
+	) {
 		this.id = projectsAmount - index;
 		this.title = title;
 		this.date = date;
 		this.category = category;
 		this.description = description;
-		this.imageName = "project" + this.id;
-		this.imageSrc = "img/works/" + this.imageName + ".png";
-		this.imageAlt = "Proj#" + this.id;
+		this.reviewInfo = reviewInfo;
+		this.gitHubRepository = gitHubRepository;
+		this.gitHubPage = gitHubPage;
+		this.projectName = "art" + this.id;
+		this.reviewImageSrc = "img/articles/" + this.projectName + "/01.png";
+		this.reviewImageAlt = "Proj#" + this.id;
+		this.mainInfo = mainInfo;
+		this.mainImageSrc = "img/articles/" + this.projectName + "/02.png";
+		this.detailInfo = detailInfo;
+		this.detailImageSrc = "img/articles/" + this.projectName + "/03.png";
 	}
 }
 
@@ -27,10 +46,19 @@ function createProjectsData(projects) {
 			element.date,
 			element.category,
 			element.description,
-			projectsAmount
+			projectsAmount,
+			element.gitHubRepository,
+			element.gitHubPage,
+			element.reviewInfo,
+			element.mainInfo,
+			element.detailInfo
 		);
 		projectsData.push(project);
 	});
 	// console.log("projectsData:", projectsData);
 	return projectsData;
 }
+
+getsProjectInfo(projectsData);
+
+function getsProjectInfo(projectsData) {}
