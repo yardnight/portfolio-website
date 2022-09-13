@@ -1669,6 +1669,17 @@ body.ie ._ibg img {
   font-weight: 800;
 }
 
+.featured-works__item {
+  padding: 0px 0px 30px 0px;
+  margin: 0px 0px 30px 0px;
+  border-bottom: 1px solid var(--color-devder);
+}
+
+.featured-works__itemlast-child {
+  margin-bottom: 0;
+  border: none;
+}
+
 /*=======================<Featured Works>=================================================================================================*/
 
 .footer {
@@ -4139,6 +4150,11 @@ body.scale-cv {
     color: var(--color-refh);
   }
 
+  .featured-works__item {
+    display: flex;
+    align-items: flex-start;
+  }
+
   .works__body {
     padding: 0px 0px 0px 18px;
   }
@@ -4473,7 +4489,7 @@ body.scale-cv {
 
   .extra-skills__slide.active {
     flex: 3;
-    height: 35vh;
+    height: 45vh;
   }
 
   .recent-post__container {

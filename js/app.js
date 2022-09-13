@@ -202,7 +202,7 @@ function favoriteProjects(data) {
 
 	for (let i = 0; i < data.length; i++) {
 		let favProject = document.createElement("article");
-		favProject.classList.add("works__item");
+		favProject.classList.add("featured-works__item");
 		favProject.innerHTML = `
         <div class="img-box">
             <a href="article.html" class="works__image _ibg">
