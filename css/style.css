@@ -739,7 +739,7 @@ body.ie ._ibg img {
   box-sizing: border-box;
   padding: 0px 0 0px 0;
   flex: 1 1 auto;
-  z-index: 0;
+  z-index: 3;
 }
 
 .hello__content *:last-child {
@@ -749,6 +749,7 @@ body.ie ._ibg img {
 .hello__title {
   margin: 10px 0 10px 0;
   font-size: 1.5rem;
+  z-index: 3;
 }
 
 .hello__text {
@@ -3098,11 +3099,11 @@ body.scale-cv {
   flex: 1 1;
   top: -30%;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 200px;
-  background: url(../img/waves2.svg);
+  background: url(../img/waves1.svg);
   background-repeat: no-repeat;
-  background-size: 150% 30%;
+  background-size: 125% 30%;
 }
 
 .rl-waves {
@@ -3769,7 +3770,7 @@ body.scale-cv {
   .wave:before {
     top: -100%;
     height: 300px;
-    background-size: 150% 32%;
+    background-size: 150% 36%;
   }
 }
 
@@ -4384,7 +4385,7 @@ body.scale-cv {
   .wave:before {
     top: -100%;
     height: 300px;
-    background-size: 150% 35%;
+    background-size: 150% 36%;
   }
 }
 
@@ -4485,7 +4486,7 @@ body.scale-cv {
   .wave:before {
     top: -100%;
     height: 300px;
-    background-size: 150% 40%;
+    background-size: 150% 37%;
   }
 }
 
@@ -4711,7 +4712,7 @@ body.scale-cv {
   }
 
   .wave:before {
-    background-size: 150% 35%;
+    background-size: 150% 38%;
   }
 }
 
