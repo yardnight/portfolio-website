@@ -1,34 +1,36 @@
 // waves
+
+createWaves();
+
 function createWaves() {
-	let waves = document.querySelectorAll(".rl-waves");
-	console.log(waves);
+	let waves = document.querySelectorAll(".waves");
+	// console.log(waves);
+
 	waves.forEach(function () {
-		let wave1 = document.querySelector(".wave-one");
-		console.log(wave1);
-		let wave2 = document.querySelector(".wave-two");
-		console.log(wave2);
+		let wave1 = document.querySelectorAll(".waves .wave-one");
+		// console.log(wave1);
+		let wave2 = document.querySelectorAll(".waves .wave-two");
+		// console.log(wave2);
 
 		let wave1Args;
 		let wave2Args;
-		console.log(screen.width);
+		// console.log(screen.width);
 		if (screen.width < 420) {
 			wave1Args = {
 				height: 20,
 				width: "110%",
 				bones: 4,
 				amplitude: 30,
-				color: "url(#id1)",
 				speed: 0.2,
-				mirrored: "scale(1,-1) translate(0,-100)",
+				// mirrored: "scale(1,-1) translate(0,-100)",
 			};
 			wave2Args = {
 				height: 20,
 				width: "110%",
 				bones: 4,
 				amplitude: 30,
-				color: "url(#id2)",
 				speed: 0.15,
-				mirrored: "scale(1,-1) translate(0,-100)",
+				// mirrored: "scale(1,-1) translate(0,-100)",
 			};
 		} else if (screen.width < 960) {
 			wave1Args = {
@@ -36,18 +38,18 @@ function createWaves() {
 				width: "110%",
 				bones: 4,
 				amplitude: 30,
-				color: "url(#id1)",
+				// color: "url(#id1)",
 				speed: 0.2,
-				mirrored: "scale(1,-1) translate(0,-100)",
+				// mirrored: "scale(1,-1) translate(0,-100)",
 			};
 			wave2Args = {
 				height: 30,
 				width: "110%",
 				bones: 4,
 				amplitude: 30,
-				color: "url(#id2)",
+				// color: "url(#id2)",
 				speed: 0.15,
-				mirrored: "scale(1,-1) translate(0,-100)",
+				// mirrored: "scale(1,-1) translate(0,-100)",
 			};
 		} else {
 			wave1Args = {
@@ -55,25 +57,26 @@ function createWaves() {
 				width: "110%",
 				bones: 4,
 				amplitude: 50,
-				color: "url(#id1)",
+				// color: "url(#id1)",
 				speed: 0.2,
-				mirrored: "scale(1,-1) translate(0,-100)",
+				// mirrored: "scale(1,-1) translate(0,-100)",
 			};
 			wave2Args = {
 				height: 30,
 				width: "110%",
 				bones: 4,
 				amplitude: 40,
-				color: "url(#id2)",
+				// color: "url(#id2)",
 				speed: 0.15,
-				mirrored: "scale(1,-1) translate(0,-100)",
+				// mirrored: "scale(1,-1) translate(0,-100)",
 			};
 		}
 		wavify(wave1, wave1Args);
 		wavify(wave2, wave2Args);
 	});
 }
-createWaves();
+
+//<SECTION WAVE>=======================
 
 //<wavify>=============================
 function wavify(wave_element, options) {
@@ -98,8 +101,8 @@ function wavify(wave_element, options) {
 		},
 		options
 	);
-	console.log("Settings:", settings);
-	console.log("Wave:", wave_element);
+	// console.log("Settings:", settings);
+	// console.log("Wave:", wave_element);
 
 	let wave = wave_element,
 		width = document
@@ -134,7 +137,7 @@ function wavify(wave_element, options) {
 
 		return points;
 	}
-	console.log("P:", points);
+	// console.log("P:", points);
 
 	function drawPath(points) {
 		var SVGString = "M " + points[0].x + " " + points[0].y;
@@ -211,9 +214,7 @@ function wavify(wave_element, options) {
 				duration: settings.speed,
 				attr: {
 					d: drawPath(drawPoints(factor)),
-					transform: settings.mirrored,
 				},
-				// ease: Power1.easeInOut
 			});
 		} else {
 			lastUpdate = now;
@@ -259,8 +260,8 @@ function wavify(wave_element, options) {
 		if (!animationInstance) {
 			tweenMaxInstance = gsap.set(wave, {
 				attr: {
-					fill: settings.color,
-					transform: settings.mirrored,
+					// fill: settings.color,
+					// transform: settings.mirrored,
 				},
 			});
 			play();
@@ -275,8 +276,8 @@ function wavify(wave_element, options) {
 		}
 		tweenMaxInstance = gsap.set(wave, {
 			attr: {
-				fill: settings.color,
-				transform: settings.mirrored,
+				// fill: settings.color,
+				// transform: settings.mirrored,
 			},
 		});
 		play();
@@ -306,8 +307,8 @@ function wavify(wave_element, options) {
 		tweenMaxInstance = gsap.to(wave, {
 			duration: parseInt(options.timing),
 			attr: {
-				fill: options.color,
-				transform: settings.mirrored,
+				// fill: options.color,
+				// transform: settings.mirrored,
 			},
 			onComplete: function () {
 				if (
@@ -333,7 +334,7 @@ function wavify(wave_element, options) {
 				attr: {
 					d: "M0,0",
 					fill: "",
-					transform: settings.mirrored,
+					// transform: settings.mirrored,
 				},
 			});
 			window.removeEventListener("resize", redraw);
