@@ -199,7 +199,7 @@
 ._icon-moon:before {
   content: "\e92c";
   color: var(--color-navhsc);
-  text-shadow: 0px 0px 5px, 0 0 0.9rem #2273b6;
+  text-shadow: 0px 0px 5px, 0 0 0.9rem #ffffff;
 }
 
 ._icon-play:before {
@@ -218,7 +218,7 @@
 ._icon-sun:before {
   content: "\e934";
   color: var(--color-sun);
-  text-shadow: 0px 0px 5px, 0 0 0.9rem #ffee00c0;
+  text-shadow: 0px 0px 5px, 0 0 0.9rem #ffffff;
 }
 
 ._icon-insta-fill:before {
@@ -259,6 +259,10 @@
 
 ._icon-font:before {
   content: "\e926";
+}
+
+._icon-language:before {
+  content: "\e927";
 }
 
 body[data-theme=light] {
@@ -2423,10 +2427,12 @@ body.ie ._ibg img {
 :root {
   --header-height: 3rem;
   /*=======================<Color Variabels>======================*/
-  --body-color: #bac5c3;
-  --container-color: #edf2f4;
+  --body-color: #f7f7f7;
+  --container-color: #dde8ec;
   --container-color-alt: #ffffff;
   --text-color: #2b2d42;
+  --active-link-light: #84e2f3;
+  --active-link: #15b0bb;
   --text-color-light: #457b9d;
   --title-color: #1d3557;
   --lamp-color: #00afb9;
@@ -2456,6 +2462,8 @@ body.dark-theme {
   --body-color: #2b2d42;
   --container-color: #1d3557;
   --container-color-alt: #457b9d;
+  --active-link-light: #fdf479;
+  --active-link: #ffffff;
   --text-color: #d9dddfe5;
   --text-color-light: #edf2f4;
   --title-color: #f1faee;
@@ -2643,8 +2651,8 @@ body.scale-cv {
   bottom: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--body-color);
-  box-shadow: 0 -1px 4px var(--container-color-alt);
+  background-color: var(--container-color);
+  box-shadow: 0 -5px 8px var(--container-color-alt);
   transition: 0.3s;
 }
 
@@ -2714,8 +2722,8 @@ body.scale-cv {
 }
 
 .active-link {
-  color: var(--text-color);
-  text-shadow: 0px 0px 1px #ffffff, 0px 0px 0.9em #ffffff;
+  color: var(--active-link);
+  text-shadow: 0px 0px 1px var(--active-link-light), 0px 0px 0.9em var(--active-link-light);
 }
 
 /*=======================<Home>======================*/
